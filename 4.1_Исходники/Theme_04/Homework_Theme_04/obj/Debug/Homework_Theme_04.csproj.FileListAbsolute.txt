@@ -1,0 +1,8 @@
+E:\Download\4.1_Исходники\Theme_04\Homework_Theme_04\bin\Debug\Homework_Theme_04.exe.config
+E:\Download\4.1_Исходники\Theme_04\Homework_Theme_04\bin\Debug\Homework_Theme_04.exe
+E:\Download\4.1_Исходники\Theme_04\Homework_Theme_04\bin\Debug\Homework_Theme_04.pdb
+E:\Download\4.1_Исходники\Theme_04\Homework_Theme_04\obj\Debug\Homework_Theme_04.csproj.AssemblyReference.cache
+E:\Download\4.1_Исходники\Theme_04\Homework_Theme_04\obj\Debug\Homework_Theme_04.csproj.SuggestedBindingRedirects.cache
+E:\Download\4.1_Исходники\Theme_04\Homework_Theme_04\obj\Debug\Homework_Theme_04.csproj.CoreCompileInputs.cache
+E:\Download\4.1_Исходники\Theme_04\Homework_Theme_04\obj\Debug\Homework_Theme_04.exe
+E:\Download\4.1_Исходники\Theme_04\Homework_Theme_04\obj\Debug\Homework_Theme_04.pdb
