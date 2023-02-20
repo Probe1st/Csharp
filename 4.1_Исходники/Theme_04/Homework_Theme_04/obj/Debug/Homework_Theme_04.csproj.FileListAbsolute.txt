@@ -6,3 +6,11 @@ E:\Download\4.1_Исходники\Theme_04\Homework_Theme_04\obj\Debug\Homework
 E:\Download\4.1_Исходники\Theme_04\Homework_Theme_04\obj\Debug\Homework_Theme_04.csproj.CoreCompileInputs.cache
 E:\Download\4.1_Исходники\Theme_04\Homework_Theme_04\obj\Debug\Homework_Theme_04.exe
 E:\Download\4.1_Исходники\Theme_04\Homework_Theme_04\obj\Debug\Homework_Theme_04.pdb
+C:\Users\Admin\Documents\GitHub\Csharp\4.1_Исходники\Theme_04\Homework_Theme_04\bin\Debug\Homework_Theme_04.exe.config
+C:\Users\Admin\Documents\GitHub\Csharp\4.1_Исходники\Theme_04\Homework_Theme_04\bin\Debug\Homework_Theme_04.exe
+C:\Users\Admin\Documents\GitHub\Csharp\4.1_Исходники\Theme_04\Homework_Theme_04\bin\Debug\Homework_Theme_04.pdb
+C:\Users\Admin\Documents\GitHub\Csharp\4.1_Исходники\Theme_04\Homework_Theme_04\obj\Debug\Homework_Theme_04.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\Csharp\4.1_Исходники\Theme_04\Homework_Theme_04\obj\Debug\Homework_Theme_04.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\Documents\GitHub\Csharp\4.1_Исходники\Theme_04\Homework_Theme_04\obj\Debug\Homework_Theme_04.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\Csharp\4.1_Исходники\Theme_04\Homework_Theme_04\obj\Debug\Homework_Theme_04.exe
+C:\Users\Admin\Documents\GitHub\Csharp\4.1_Исходники\Theme_04\Homework_Theme_04\obj\Debug\Homework_Theme_04.pdb
