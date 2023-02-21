@@ -132,76 +132,73 @@ namespace Homework_Theme_04
             #endregion
 
             // ---------------------------------------------------------------------- \\
+            #region ex. 1 dicision
+/*
+            #region arrays
+            //Console.WriteLine("Enter number of months");
+            int Months = 12;
+            int[] expenses = new int[Months];
+            int[] receipts = new int[Months];
+            int[,] profit = new int[2, Months];
+            #endregion
 
-            #region ex. 1 decision
-            /*
-                        #region arrays
-                        //Console.WriteLine("Enter number of months");
-                        int Months = 12;
-                        int[] expenses = new int[Months];
-                        int[] receipts = new int[Months];
-                        int[,] profit = new int[2, Months];
-                        #endregion
+            #region Filling of arrays
+            Random random = new Random();
 
-                        #region Filling of arrays
-                        Random random = new Random();
+            for (int i = 0; i < expenses.Length; i++)       //filling the expenses
+            {
+                expenses[i] = random.Next(50_000, 100_000);
+            }
 
-                        for (int i = 0; i < expenses.Length; i++)       //filling the expenses
-                        {
-                            expenses[i] = random.Next(50_000, 100_000);
-                        }
+            for (int i = 0; i < receipts.Length; i++)       //filling the reciepts
+            {
+                receipts[i] = random.Next(50_000, 200_001);
+            }
 
-                        for (int i = 0; i < receipts.Length; i++)       //filling the reciepts
-                        {
-                            receipts[i] = random.Next(50_000, 200_001);
-                        }
+            for (int i = 0; i < Months; i++)         //filling the profit
+            {
+                profit[1, i] = receipts[i] - expenses[i];
+            }
+            for (int i = 0; i < Months; i++)
+            {
+                profit[0, i] = i + 1;
+            }
 
-                        for (int i = 0; i < Months; i++)         //filling the profit
-                        {
-                            profit[1, i] = receipts[i] - expenses[i];
-                        }
-                        for (int i = 0; i < Months; i++)
-                        {
-                            profit[0, i] = i + 1;
-                        }
+            #endregion
 
-                        #endregion
+            #region The number of months with a positive profit
+            int NumMonths = 0;
 
-                        #region The number of months with a positive profit
-                        int NumMonths = 0;
+            for (int i = 0; i < Months; i++)
+            {
+                if (profit[1, i] > 0)
+                {
+                    NumMonths++;
+                }
+            }
+            #endregion
 
-                        for (int i = 0; i < Months; i++)
-                        {
-                            if (profit[1, i] > 0)
-                            {
-                                NumMonths++;
-                            }
-                        }
-                        #endregion
+            #region output
 
-                        #region output
-
-                        #region table
-                        Console.WriteLine( $"{"Month", 5}    {"Receipts, thous. RUB", 20}    {"Expenses, thous. RUB", 20}    {"Profit, thous. RUB", 18}" );
-
-
-                        for (int i = 0; i < Months; i++)
-                        {
-                            string patternOutput = $"{i + 1, 5}    {receipts[i], 20}    {expenses[i], 20}    {profit[1, i], 18}";
-                            Console.WriteLine(patternOutput);
-                        }
-                        #endregion
-
-                        Console.WriteLine($"The number of months with a positive profit: {NumMonths}");
-
-                        #region Worst months
-                        Console.Write("Worst profit in moths: ");
+            #region table
+            Console.WriteLine($"{"Month",5}    {"Receipts, thous. RUB",20}    {"Expenses, thous. RUB",20}    {"Profit, thous. RUB",18}");
 
 
-                        #endregion
+            for (int i = 0; i < Months; i++)
+            {
+                string patternOutput = $"{i + 1,5}    {receipts[i],20}    {expenses[i],20}    {profit[1, i],18}";
+                Console.WriteLine(patternOutput);
+            }
+            #endregion
 
-                        #endregion
-            */
+            Console.WriteLine($"The number of months with a positive profit: {NumMonths}");
+
+            #region Worst months
+            Console.Write("Worst profit in moths: ");
+            #endregion
+
+            #endregion
+*/
             #endregion
 
             #region ex. 3.1-3.2 decision
@@ -462,28 +459,37 @@ namespace Homework_Theme_04
             */
             #endregion
 
+
+
             #region ex. 3.3 decision
 
             #region Data entry
 
+            #region initialization
             int columns1 = 0;
             int lines1 = 0;
             int columns2 = 0;
             int lines2 = 0;
 
+            int FirstSummand = 0;
+
             int[,] matrix1 = new int[lines1, columns1];
             int[,] matrix2 = new int[lines2, columns2];
-
-            Random rand = new Random();
+            int[,] matrixOut = new int[lines1, columns2];
 
             bool check = false;
+
+            Random rand = new Random();
+            #endregion
+
+            check = false;
             while (check == false)
             {
                 Console.WriteLine("Enter the number of columns in the first matrix");
                 columns1 = Convert.ToInt32(Console.ReadLine());
 
                 #region checking numbers of columns
-                bool check = false;
+                check = false;
                 while (check == false)
                 {
                     if (columns1 < 1)
@@ -523,7 +529,7 @@ namespace Homework_Theme_04
                 columns2 = Convert.ToInt32(Console.ReadLine());
 
                 #region checking numbers of columns
-                bool check = false;
+                check = false;
                 while (check == false)
                 {
                     if (columns2 < 1)
@@ -566,12 +572,11 @@ namespace Homework_Theme_04
                 else
                 {
                     Console.WriteLine("You have entered the wrong number of columns" +
-                        "and rows of matrices. Enter new matrix sizes")
+                        "and rows of matrices. Enter new matrix sizes");
                 }
             }
 
-            int[,] matrixOut = new int[lines1, columns2];
-
+            #region filling arrays
             for (int i = 0; i < matrix1.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix1.GetLength(1); j++)
@@ -588,13 +593,35 @@ namespace Homework_Theme_04
                 }
             }
 
-            for (int i = 0; i < matrixOut.GetLength(0))
+            #endregion
+
+            #endregion
+
+            #region program
+            for (int i = 0; i < matrixOut.GetLength(0); i++)                                //строки
             {
-                for (int j = 0; j < matrixOut.GetLength(1))
+                for (int j = 0; j < matrixOut.GetLength(1); j++)                            //столбцы
                 {
-                    matrixOut[i, j] = 
+                    for (int x = 0; x < matrix1.GetLength(0); x++)                          //строки
+                    {
+                        for (int y = 0; y < matrix2.GetLength(1); y++)                      //столбцы
+                        {
+                             = matrix1[i, y] * matrix2[x, j];
+                        }
+                    }
                 }
             }
+
+
+
+            for (int i = 0; i < matrixOut.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrixOut.GetLength(1); j++)
+                {
+                    matrixOut[i, j] = (matrix1[i, j] * matrix2[i, j]); 
+                }
+            }
+            #endregion            
 
             #endregion
 

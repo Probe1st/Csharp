@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "задача-Ex1",
+      "appliesTo": "Theme_04/Homework_Theme_04/Ex1.cs",
+      "type": "launch"
+    }
+  ]
+}
