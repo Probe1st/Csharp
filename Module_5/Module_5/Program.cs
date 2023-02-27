@@ -82,33 +82,43 @@ namespace Module_5
         {
             int Output = 1;
             string[] number = new string[199];
-            for (int i = 0; i < number.GetLength(0); i++)
+            for (int i = 1; i < number.GetLength(0); i++)
             {
                 int a = i - 99;
                 string n = Convert.ToString(a);
                 number[i] = n;
             }
+            number[0] = "пон";
 
-            bool checkHead = true;
-            while (checkHead = true)
+           
+
+            if (Entering == "пон")
             {
-                for (int i = 0; i < number.GetLength(0); i++)
+                Console.WriteLine("Супер пупир понятни пон");
+            }
+            else
+            {
+                bool checkHead = true;
+                while (checkHead = true)
                 {
-                    if (Entering == number[i])
+                    for (int i = 0; i < number.GetLength(0); i++)
                     {
-                        Output = Convert.ToInt32(Entering);
-                        checkHead = false;
+                        if (Entering == number[i])
+                        {
+                            Output = Convert.ToInt32(Entering);
+                            checkHead = false;
+                        }
                     }
-                }
-                if (checkHead == false)
-                {
-                    break;
-                }
-                else
-                {
-                    Console.Write("It wasn't a number or number is too big. " +
-                        "Enter new the NUMBER ");
-                    Entering = Console.ReadLine();
+                    if (checkHead == false)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Console.Write("It wasn't a number or number is too big. " +
+                            "Enter new the NUMBER ");
+                        Entering = Console.ReadLine();
+                    }
                 }
             }
             return Output;
@@ -129,341 +139,346 @@ namespace Module_5
 
             #region ex. 1.1-1.3 decision
 
-            #region Data entry
-
-            #region Enterinng sign and check
-            Console.Write("Enter sign ");
-            string sign = Convert.ToString(Console.ReadLine());
-            
-            //check sign
-            while(true)
-            {
-                if ((sign == "+") || (sign == "-") || (sign == "*") || (sign == "**"))
-                {
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("You entered incorrect sign. " +
-                        "Entering new sign");
-                    sign = Convert.ToString(Console.ReadLine());
-                }
-            }
-            #endregion
-
-            #region entering the number of lines and columns of matrices
-            //entering the number of lines and columns of matrices
-            //checking the data
-            int lines = 1;
-            int columns = 1;
-            int lines2 = 1;
-            int columns2 = 1;
             while (true)
             {
-                if (sign == "**")
+
+                #region Data entry
+
+                #region Enterinng sign and check
+                Console.Write("Enter sign ");
+                string sign = Convert.ToString(Console.ReadLine());
+
+                //check sign
+                while (true)
                 {
-                    Console.Write("Enter a number of columns of the 1-st matrix ");
-                    var EntColumns = Console.ReadLine();
-
-                    columns = CheckNumber(EntColumns);
-
-                    Console.Write("Enter a number of lines of the 1-st matrix ");
-                    var EntLines = Console.ReadLine();
-
-                    lines = CheckNumber(EntLines);
-
-                    Console.Write("Enter a number of columns of the 2-nd matrix ");
-                    EntColumns = Console.ReadLine();
-
-                    columns2 = CheckNumber(EntColumns);
-
-                    Console.Write("Enter a number of lines of the 2-nd matrix ");
-                    EntLines = Console.ReadLine();
-
-                    lines2 = CheckNumber(EntLines);
-
-                    if (columns == lines2)
+                    if ((sign == "+") || (sign == "-") || (sign == "*") || (sign == "**"))
                     {
                         break;
                     }
                     else
                     {
-                        Console.WriteLine("\nYou entered incorrect size of matrices. " +
-                            "\n    Enter new size of matrices\n");
+                        Console.WriteLine("You entered incorrect sign. " +
+                            "Entering new sign");
+                        sign = Convert.ToString(Console.ReadLine());
                     }
-
                 }
-                else
+                #endregion
+
+                #region entering the number of lines and columns of matrices
+                //entering the number of lines and columns of matrices
+                //checking the data
+                int lines = 1;
+                int columns = 1;
+                int lines2 = 1;
+                int columns2 = 1;
+                while (true)
                 {
-                    Console.Write("Enter a number of columns ");
-                    var EntColumns = Console.ReadLine();
-
-                    columns = CheckNumber(EntColumns);
-
-                    Console.Write("Enter a number of lines ");
-                    var EntLines = Console.ReadLine();
-
-                    lines = CheckNumber(EntLines);
-
-                    break;
-                }
-
-            }
-            #endregion
-
-            #region Arrays and their filling
-
-            #region arrays
-            int[,] matrix = new int[lines, columns];
-            int[,] matrix2 = new int[lines, columns];
-            int[,] matrixOut = new int[lines, columns];
-
-            int[,] matrixOut2 = new int[lines2, columns];
-            int[,] matrix3 = new int[lines2, columns2];
-            #endregion
-
-            #region entering arrays
-            Random r = new Random();
-            for (int i = 0; i < matrix.GetLength(0); i++)
-            {
-                for (int j = 0; j < matrix.GetLength(1); j++)
-                {
-                    matrix[i, j] = r.Next(1, 10);
-                }
-            }
-            for (int i = 0; i < matrix2.GetLength(0); i++)
-            {
-                for (int j = 0; j < matrix2.GetLength(1); j++)
-                {
-                    matrix2[i, j] = r.Next(1, 10);
-                }
-            }
-            for (int i = 0; i < matrix3.GetLength(0); i++)
-            {
-                for (int j = 0; j < matrix3.GetLength(1); j++)
-                {
-                    matrix3[i, j] = r.Next(1, 10);
-                }
-            }
-            #endregion
-
-            #endregion
-
-            #endregion
-
-            #region perfoming action
-            int multiplier = 0;
-            while (true)
-            {
-                //performing multiplication
-                if (sign == "*")
-                {
-                    Console.Write("Enter a multiplier ");
-                    var EntMultiplier = Console.ReadLine();
-
-                    multiplier = CheckNumber(EntMultiplier);
-
-                    bool check = false;
-                    while (check == false)
+                    if (sign == "**")
                     {
-                        if ((multiplier > 99) || (multiplier < -99))
+                        Console.Write("Enter a number of columns of the 1-st matrix ");
+                        var EntColumns = Console.ReadLine();
+
+                        columns = CheckNumber(EntColumns);
+
+                        Console.Write("Enter a number of lines of the 1-st matrix ");
+                        var EntLines = Console.ReadLine();
+
+                        lines = CheckNumber(EntLines);
+
+                        Console.Write("Enter a number of columns of the 2-nd matrix ");
+                        EntColumns = Console.ReadLine();
+
+                        columns2 = CheckNumber(EntColumns);
+
+                        Console.Write("Enter a number of lines of the 2-nd matrix ");
+                        EntLines = Console.ReadLine();
+
+                        lines2 = CheckNumber(EntLines);
+
+                        if (columns == lines2)
                         {
-                            Console.WriteLine("You entered number too big. " +
-                                "Entering new multiplier");
-                            multiplier = Convert.ToInt32(Console.ReadLine());
+                            break;
                         }
                         else
                         {
-                            check = true;
+                            Console.WriteLine("\nYou entered incorrect size of matrices. " +
+                                "\n    Enter new size of matrices\n");
                         }
 
-                    }
-
-                    matrixOut = Multiplication(multiplier, matrix);
-
-                    break;
-                }
-
-                //performing addition
-                else if (sign == "+")
-                {
-                    matrixOut = Addition(matrix, matrix2);
-
-                    break;
-                }
-
-                //performing subtraction
-                else if (sign == "-")
-                {
-                    matrixOut = Subtraction(matrix, matrix2);
-
-                    break;
-                }
-
-                else if (sign == "**")
-                {
-                    matrixOut2 = Multiplication(matrix, matrix3);
-
-                    break;
-                }
-
-            }
-            #endregion
-
-            #region Output
-            if (sign != "**")
-            {
-                #region output 1 
-                for (int i = 0; i < matrixOut.GetLength(0); i++)
-                {
-                    #region tabulation "multiplier * "
-
-                    if (sign == "*")
-                    {
-                        if ((i % 2 == 0) && (i == (lines / 2)))
-                        {
-                            Console.Write(multiplier + " x ");
-                            if ((multiplier < 10) && (multiplier > -1)) Console.Write("  ");   //для чисел длинной в один знак
-                            if (multiplier > 9) Console.Write(" ");                            //для положительных чисел длинной в два знака
-                            if ((multiplier > -10) && (multiplier < 0)) Console.Write(" ");    //для отрицательных чисел длинной в два знака
-                        }
-                        else if ((i % 2 == 1) && (i == (lines / 2)))
-                        {
-                            Console.Write(multiplier + " x ");
-                            if ((multiplier < 10) && (multiplier > -1)) Console.Write("  ");   //для чисел длинной в один знак
-                            if (multiplier > 9) Console.Write(" ");                            //для положительных чисел длинной в два знака
-                            if ((multiplier > -10) && (multiplier < 0)) Console.Write(" ");    //для отрицательных чисел длинной в два знака
-                        }
-                        else
-                        {
-                            Console.Write("      ");
-                        }
-                    }
-
-                    #endregion
-
-                    Console.Write("| ");
-                    for (int j = 0; j < matrix.GetLength(1); j++)
-                    {
-                        Console.Write($"{matrix[i, j],3} ");
-                    }
-                    Console.Write("  |");
-
-                    #region tabulation "+/-"
-                    if (sign == "+")
-                    {
-                        if ((i % 2 == 0) && (i == (lines / 2)))
-                        {
-                            Console.Write(" + ");
-                        }
-                        else if ((i % 2 == 1) && (i == (lines / 2)))
-                        {
-                            Console.Write(" + ");
-                        }
-                        else
-                        {
-                            Console.Write("   ");
-                        }
-                    }
-                    else if (sign == "-")
-                    {
-                        if ((i % 2 == 0) && (i == (lines / 2)))
-                        {
-                            Console.Write(" - ");
-                        }
-                        else if ((i % 2 == 1) && (i == (lines / 2)))
-                        {
-                            Console.Write(" - ");
-                        }
-                        else
-                        {
-                            Console.Write("   ");
-                        }
-                    }
-                    #endregion
-
-                    if ((sign == "+") || (sign == "-"))
-                    {
-                        Console.Write("| ");
-                        for (int j = 0; j < matrix2.GetLength(1); j++)
-                        {
-                            Console.Write($"{matrix2[i, j],3} ");
-                        }
-                        Console.Write("  |");
-                    }
-
-                    #region tabulation "="
-                    if ((i % 2 == 0) && (i == (lines / 2)))
-                    {
-                        Console.Write(" = ");
-                    }
-                    else if ((i % 2 == 1) && (i == (lines / 2)))
-                    {
-                        Console.Write(" = ");
                     }
                     else
                     {
-                        Console.Write("   ");
-                    }
-                    #endregion
+                        Console.Write("Enter a number of columns ");
+                        var EntColumns = Console.ReadLine();
 
-                    Console.Write("| ");
-                    for (int j = 0; j < matrixOut.GetLength(1); j++)
-                    {
-                        Console.Write($"{matrixOut[i, j],5} ");
-                    }
-                    Console.Write("  |");
+                        columns = CheckNumber(EntColumns);
 
-                    Console.WriteLine("");
+                        Console.Write("Enter a number of lines ");
+                        var EntLines = Console.ReadLine();
+
+                        lines = CheckNumber(EntLines);
+
+                        break;
+                    }
+
                 }
                 #endregion
-            }
-            else if (sign == "**")
-            {
+
+                #region Arrays and their filling
+
+                #region arrays
+                int[,] matrix = new int[lines, columns];
+                int[,] matrix2 = new int[lines, columns];
+                int[,] matrixOut = new int[lines, columns];
+
+                int[,] matrixOut2 = new int[lines2, columns];
+                int[,] matrix3 = new int[lines2, columns2];
+                #endregion
+
+                #region entering arrays
+                Random r = new Random();
                 for (int i = 0; i < matrix.GetLength(0); i++)
                 {
-                    Console.Write("| ");
                     for (int j = 0; j < matrix.GetLength(1); j++)
                     {
-                        Console.Write($"{matrix[i, j]} ");
+                        matrix[i, j] = r.Next(1, 10);
                     }
-                    Console.WriteLine("|");
                 }
-                Console.WriteLine("");
-
-                #region tabulation "*"
-                Console.WriteLine("*");
-                Console.WriteLine("");
-                #endregion
-
+                for (int i = 0; i < matrix2.GetLength(0); i++)
+                {
+                    for (int j = 0; j < matrix2.GetLength(1); j++)
+                    {
+                        matrix2[i, j] = r.Next(1, 10);
+                    }
+                }
                 for (int i = 0; i < matrix3.GetLength(0); i++)
                 {
-                    Console.Write("| ");
                     for (int j = 0; j < matrix3.GetLength(1); j++)
                     {
-                        Console.Write($"{matrix3[i, j]} ");
+                        matrix3[i, j] = r.Next(1, 10);
                     }
-                    Console.WriteLine("|");
                 }
-                Console.WriteLine("");
-
-                #region tabulation "="
-                Console.WriteLine("=");
-                Console.WriteLine("");
                 #endregion
 
-                for (int i = 0; i < matrixOut2.GetLength(0); i++)
+                #endregion
+
+                #endregion
+
+                #region perfoming action
+                int multiplier = 0;
+                while (true)
                 {
-                    Console.Write("| ");
-                    for (int j = 0; j < matrixOut2.GetLength(1); j++)
+                    //performing multiplication
+                    if (sign == "*")
                     {
-                        Console.Write($"{matrixOut2[i, j], 4} ");
+                        Console.Write("Enter a multiplier ");
+                        var EntMultiplier = Console.ReadLine();
+
+                        multiplier = CheckNumber(EntMultiplier);
+
+                        bool check = false;
+                        while (check == false)
+                        {
+                            if ((multiplier > 99) || (multiplier < -99))
+                            {
+                                Console.WriteLine("You entered number too big. " +
+                                    "Entering new multiplier");
+                                multiplier = Convert.ToInt32(Console.ReadLine());
+                            }
+                            else
+                            {
+                                check = true;
+                            }
+
+                        }
+
+                        matrixOut = Multiplication(multiplier, matrix);
+
+                        break;
                     }
-                    Console.WriteLine(" |");
+
+                    //performing addition
+                    else if (sign == "+")
+                    {
+                        matrixOut = Addition(matrix, matrix2);
+
+                        break;
+                    }
+
+                    //performing subtraction
+                    else if (sign == "-")
+                    {
+                        matrixOut = Subtraction(matrix, matrix2);
+
+                        break;
+                    }
+
+                    else if (sign == "**")
+                    {
+                        matrixOut2 = Multiplication(matrix, matrix3);
+
+                        break;
+                    }
+
                 }
-                Console.Write("");
+                #endregion
+
+                #region Output
+                if (sign != "**")
+                {
+                    #region output 1 
+                    for (int i = 0; i < matrixOut.GetLength(0); i++)
+                    {
+                        #region tabulation "multiplier * "
+
+                        if (sign == "*")
+                        {
+                            if ((i % 2 == 0) && (i == (lines / 2)))
+                            {
+                                Console.Write(multiplier + " x ");
+                                if ((multiplier < 10) && (multiplier > -1)) Console.Write("  ");   //для чисел длинной в один знак
+                                if (multiplier > 9) Console.Write(" ");                            //для положительных чисел длинной в два знака
+                                if ((multiplier > -10) && (multiplier < 0)) Console.Write(" ");    //для отрицательных чисел длинной в два знака
+                            }
+                            else if ((i % 2 == 1) && (i == (lines / 2)))
+                            {
+                                Console.Write(multiplier + " x ");
+                                if ((multiplier < 10) && (multiplier > -1)) Console.Write("  ");   //для чисел длинной в один знак
+                                if (multiplier > 9) Console.Write(" ");                            //для положительных чисел длинной в два знака
+                                if ((multiplier > -10) && (multiplier < 0)) Console.Write(" ");    //для отрицательных чисел длинной в два знака
+                            }
+                            else
+                            {
+                                Console.Write("      ");
+                            }
+                        }
+
+                        #endregion
+
+                        Console.Write("| ");
+                        for (int j = 0; j < matrix.GetLength(1); j++)
+                        {
+                            Console.Write($"{matrix[i, j],3} ");
+                        }
+                        Console.Write("  |");
+
+                        #region tabulation "+/-"
+                        if (sign == "+")
+                        {
+                            if ((i % 2 == 0) && (i == (lines / 2)))
+                            {
+                                Console.Write(" + ");
+                            }
+                            else if ((i % 2 == 1) && (i == (lines / 2)))
+                            {
+                                Console.Write(" + ");
+                            }
+                            else
+                            {
+                                Console.Write("   ");
+                            }
+                        }
+                        else if (sign == "-")
+                        {
+                            if ((i % 2 == 0) && (i == (lines / 2)))
+                            {
+                                Console.Write(" - ");
+                            }
+                            else if ((i % 2 == 1) && (i == (lines / 2)))
+                            {
+                                Console.Write(" - ");
+                            }
+                            else
+                            {
+                                Console.Write("   ");
+                            }
+                        }
+                        #endregion
+
+                        if ((sign == "+") || (sign == "-"))
+                        {
+                            Console.Write("| ");
+                            for (int j = 0; j < matrix2.GetLength(1); j++)
+                            {
+                                Console.Write($"{matrix2[i, j],3} ");
+                            }
+                            Console.Write("  |");
+                        }
+
+                        #region tabulation "="
+                        if ((i % 2 == 0) && (i == (lines / 2)))
+                        {
+                            Console.Write(" = ");
+                        }
+                        else if ((i % 2 == 1) && (i == (lines / 2)))
+                        {
+                            Console.Write(" = ");
+                        }
+                        else
+                        {
+                            Console.Write("   ");
+                        }
+                        #endregion
+
+                        Console.Write("| ");
+                        for (int j = 0; j < matrixOut.GetLength(1); j++)
+                        {
+                            Console.Write($"{matrixOut[i, j],5} ");
+                        }
+                        Console.Write("  |");
+
+                        Console.WriteLine("");
+                    }
+                    #endregion
+                }
+                else if (sign == "**")
+                {
+                    for (int i = 0; i < matrix.GetLength(0); i++)
+                    {
+                        Console.Write("| ");
+                        for (int j = 0; j < matrix.GetLength(1); j++)
+                        {
+                            Console.Write($"{matrix[i, j]} ");
+                        }
+                        Console.WriteLine("|");
+                    }
+                    Console.WriteLine("");
+
+                    #region tabulation "*"
+                    Console.WriteLine("*");
+                    Console.WriteLine("");
+                    #endregion
+
+                    for (int i = 0; i < matrix3.GetLength(0); i++)
+                    {
+                        Console.Write("| ");
+                        for (int j = 0; j < matrix3.GetLength(1); j++)
+                        {
+                            Console.Write($"{matrix3[i, j]} ");
+                        }
+                        Console.WriteLine("|");
+                    }
+                    Console.WriteLine("");
+
+                    #region tabulation "="
+                    Console.WriteLine("=");
+                    Console.WriteLine("");
+                    #endregion
+
+                    for (int i = 0; i < matrixOut2.GetLength(0); i++)
+                    {
+                        Console.Write("| ");
+                        for (int j = 0; j < matrixOut2.GetLength(1); j++)
+                        {
+                            Console.Write($"{matrixOut2[i, j],4} ");
+                        }
+                        Console.WriteLine(" |");
+                    }
+                    Console.Write("");
+                }
+                #endregion
+
             }
-            #endregion
 
             #endregion
 
