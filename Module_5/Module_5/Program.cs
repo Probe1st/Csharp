@@ -24,24 +24,32 @@ namespace Module_5
 
         static int[,] Multiplication(int[,] matrix1, int[,] matrix2)
         {
-            int[,] matrixOut = new int[matrix2.GetLength(0), matrix1.GetLength(1)];
+            int[,] matrixOut = new int[matrix1.GetLength(0), matrix2.GetLength(1)];
 
             for (int i = 0; i < matrixOut.GetLength(0); i++)                //строки фиксированные
             {
                 for (int j = 0; j < matrixOut.GetLength(1); j++)            //столбцы фиксированные
                 {
                     int sum = 0;
-                    for (int k = 0; k < matrix2.GetLength(0); k++)          //строки
+                    for (int k = 0; k < matrix1.GetLength(1); k++)          //строки или столбцы
                     {
-                        for (int l = 0; l < matrix1.GetLength(1); l++)      //столбцы
-                        {
-                            sum += matrix1[i, l] * matrix2[k, j];
-                        }
+                        //for (int l = 0; l < matrix1.GetLength(1); l++)      //столбцы
+                        //{
+                            sum += matrix1[i,k] * matrix2[k,j];
+                        //}
                     }
                     matrixOut[i, j] = sum;
                 }
             }
             return matrixOut;
+            //
+            // строки * столбцы
+            // M * N
+            //
+            // N * K
+            //
+            // M * K
+
         }
 
         static int[,] Addition(int[,] matrix1, int[,] matrix2)
@@ -122,6 +130,8 @@ namespace Module_5
             #region ex. 1.1-1.3 decision
 
             #region Data entry
+
+            #region Enterinng sign and check
             Console.Write("Enter sign ");
             string sign = Convert.ToString(Console.ReadLine());
             
@@ -139,6 +149,7 @@ namespace Module_5
                     sign = Convert.ToString(Console.ReadLine());
                 }
             }
+            #endregion
 
             #region entering the number of lines and columns of matrices
             //entering the number of lines and columns of matrices
@@ -201,11 +212,15 @@ namespace Module_5
             #endregion
 
             #region Arrays and their filling
+
+            #region arrays
             int[,] matrix = new int[lines, columns];
-            int[,] matrixOut = new int[lines, columns];
-            int[,] matrixOut2 = new int[lines2, columns];
             int[,] matrix2 = new int[lines, columns];
+            int[,] matrixOut = new int[lines, columns];
+
+            int[,] matrixOut2 = new int[lines2, columns];
             int[,] matrix3 = new int[lines2, columns2];
+            #endregion
 
             #region entering arrays
             Random r = new Random();
@@ -287,7 +302,7 @@ namespace Module_5
 
                 else if (sign == "**")
                 {
-                    matrixOut2 = Multiplication(matrix, matrix2);
+                    matrixOut2 = Multiplication(matrix, matrix3);
 
                     break;
                 }
@@ -405,67 +420,48 @@ namespace Module_5
             }
             else if (sign == "**")
             {
-                #region Output 2
-                for (int i = 0; i < matrixOut2.GetLength(0); i++)           //строки фиксированные
+                for (int i = 0; i < matrix.GetLength(0); i++)
                 {
-
-                    Console.Write("@| ");
-                    for (int j = 0; j < matrix.GetLength(1); j++)           //столбцы
+                    Console.Write("| ");
+                    for (int j = 0; j < matrix.GetLength(1); j++)
                     {
-                        Console.Write($"{matrix[j, i],3} ");                // M x N
+                        Console.Write($"{matrix[i, j]} ");
                     }
-                    Console.Write("  |@");
-
-                    #region tabulation "*"
-                    if (sign == "**")
-                    {
-                        if ((i % 2 == 0) && (i == (lines / 2)))
-                        {
-                            Console.Write(" * ");
-                        }
-                        else if ((i % 2 == 1) && (i == (lines / 2)))
-                        {
-                            Console.Write(" * ");
-                        }
-                        else
-                        {
-                            Console.Write("   ");
-                        }
-                    }
-                    #endregion
-
-                    Console.Write("@| ");
-                    for (int j = 0; j < matrix2.GetLength(1); j++)          //столбцы
-                    {
-                        Console.Write($"{matrix2[i, j],3} ");               // N x K
-                    }
-                    Console.Write("  |@");
-
-                    #region tabulation "="
-                    if ((i % 2 == 0) && (i == (lines / 2)))
-                    {
-                        Console.Write(" = ");
-                    }
-                    else if ((i % 2 == 1) && (i == (lines / 2)))
-                    {
-                        Console.Write(" = ");
-                    }
-                    else
-                    {
-                        Console.Write("   ");
-                    }
-                    #endregion
-
-                    Console.Write("@| ");
-                    for (int j = 0; j < matrixOut2.GetLength(1); j++)       //столбцы
-                    {
-                        Console.Write($"{matrixOut2[i, j],5} ");            // M x K
-                    }
-                    Console.Write("  |@");
-
-                    Console.WriteLine("");
+                    Console.WriteLine("|");
                 }
+                Console.WriteLine("");
+
+                #region tabulation "*"
+                Console.WriteLine("*");
+                Console.WriteLine("");
                 #endregion
+
+                for (int i = 0; i < matrix3.GetLength(0); i++)
+                {
+                    Console.Write("| ");
+                    for (int j = 0; j < matrix3.GetLength(1); j++)
+                    {
+                        Console.Write($"{matrix3[i, j]} ");
+                    }
+                    Console.WriteLine("|");
+                }
+                Console.WriteLine("");
+
+                #region tabulation "="
+                Console.WriteLine("=");
+                Console.WriteLine("");
+                #endregion
+
+                for (int i = 0; i < matrixOut2.GetLength(0); i++)
+                {
+                    Console.Write("| ");
+                    for (int j = 0; j < matrixOut2.GetLength(1); j++)
+                    {
+                        Console.Write($"{matrixOut2[i, j], 4} ");
+                    }
+                    Console.WriteLine(" |");
+                }
+                Console.Write("");
             }
             #endregion
 
