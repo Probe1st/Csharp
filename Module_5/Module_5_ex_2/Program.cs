@@ -12,61 +12,37 @@ namespace Module_5_ex_2
         {
             int kursor1 = 0;
             int kursor2 = 0;
-            string Output = "";
-            string spec = "";
             int length = 2_147_483_647;
+            int count = 0;
+            int beginning = 0;
+            int end = 0;
 
             for (int i = 0; i < input.Length; i++)
             {
-                char space = Convert.ToChar("\u0020");
+                char space = Convert.ToChar(" ");
                 if (space == input[i])
                 {
                     kursor1 = i;
-                    bool Bool = false;
-                    while (Bool == false)
-                    {
-                        for (int j = i + 1; j < input.Length; j++)
-                        {
-                            if (space == input[i])
-                            {
-                                kursor2 = j;
-                                Bool = true;
-                                break;
-                            }
-                        }
-                    }
-
-                    if ((kursor2 - kursor1 - 1) < length)
-                    {
-                        length = kursor2 - kursor1 - 1;
-                        spec = $"{kursor1}";
-                    }
                 }
                 else
-                {
-                    kursor1 = i - 1;
-                    bool Bool = false;
-                    while (Bool == false)
+                {       
+                    while (space != input[i])
                     {
-                        for (int j = i + 1; j < input.Length; j++)
-                        {
-                            if (space == input[i])
-                            {
-                                kursor2 = j;
-                                Bool = true;
-                                break;
-                            }
-                        }
-                    }
-
-                    if ((kursor2 - kursor1 - 1) < length)
-                    {
-                        length = kursor2 - kursor1 - 1;
-                        spec = $"{kursor1}";
+                        kursor2 = i;
+                        i++;
                     }
                 }
-                Output = input.Substring(kursor1, length);
+
+                if ((kursor2 - kursor1) < length)
+                {
+                    length = kursor2 - kursor1;
+                }
+                Console.WriteLine($"{kursor1} and {kursor2}; length: {length}");
             }
+
+            string Output = input.Substring(kursor1, 1);
+
+            Console.WriteLine(count);
 
             return Output;
 
@@ -86,9 +62,11 @@ namespace Module_5_ex_2
             // 2. ГГГГ, ДДДД
             //
 
-            string input = "A ББ ВВВ ГГГГ ДДДД  ДД ЕЕ ЖЖ ЗЗЗ";
+            string input = "A ББ ВВВ ГГГГ ДДДД ДД ЕЕ ЖЖ ЗЗЗ";
 
-            Console.WriteLine(Word(input));
+            string Output = Word(input);
+
+            Console.WriteLine(Output);
             Console.ReadKey();
         }
     }
