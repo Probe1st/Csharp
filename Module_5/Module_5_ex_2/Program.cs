@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,43 +9,18 @@ namespace Module_5_ex_2
 {
     internal class Program
     {
-        static string Word(string input)
+        static string[] Word(string String)
         {
-            int kursor1 = 0;
-            int kursor2 = 0;
-            int length = 2_147_483_647;
-            int count = 0;
-            int beginning = 0;
-            int end = 0;
 
-            for (int i = 0; i < input.Length; i++)
-            {
-                char space = Convert.ToChar(" ");
-                if (space == input[i])
-                {
-                    kursor1 = i;
-                }
-                else
-                {       
-                    while (space != input[i])
-                    {
-                        kursor2 = i;
-                        i++;
-                    }
-                }
+        }
 
-                if ((kursor2 - kursor1) < length)
-                {
-                    length = kursor2 - kursor1;
-                }
-                Console.WriteLine($"{kursor1} and {kursor2}; length: {length}");
-            }
+        static void LengthWord(string Word)
+        {
 
-            string Output = input.Substring(kursor1, 1);
+        }
 
-            Console.WriteLine(count);
-
-            return Output;
+        static string MinWord(string input)
+        {
 
         }
 
@@ -64,7 +40,7 @@ namespace Module_5_ex_2
 
             string input = "A ББ ВВВ ГГГГ ДДДД ДД ЕЕ ЖЖ ЗЗЗ";
 
-            string Output = Word(input);
+            string Output = MinWord(input);
 
             Console.WriteLine(Output);
             Console.ReadKey();

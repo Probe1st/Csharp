@@ -80,45 +80,15 @@ namespace Module_5
 
         static int CheckNumber(string Entering)
         {
-            int Output = 1;
-            string[] number = new string[199];
-            for (int i = 1; i < number.GetLength(0); i++)
+            bool canConvert = int.TryParse(Entering, out int Output);
+            if (canConvert == false)
             {
-                int a = i - 99;
-                string n = Convert.ToString(a);
-                number[i] = n;
-            }
-            number[0] = "пон";
-
-           
-
-            if (Entering == "пон")
-            {
-                Console.WriteLine("Супер пупир понятни пон");
-            }
-            else
-            {
-                bool checkHead = true;
-                while (checkHead = true)
+                while (canConvert == false)
                 {
-                    for (int i = 0; i < number.GetLength(0); i++)
-                    {
-                        if (Entering == number[i])
-                        {
-                            Output = Convert.ToInt32(Entering);
-                            checkHead = false;
-                        }
-                    }
-                    if (checkHead == false)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        Console.Write("It wasn't a number or number is too big. " +
+                    Console.Write("It wasn't a number. " +
                             "Enter new the NUMBER ");
-                        Entering = Console.ReadLine();
-                    }
+                    Entering = Console.ReadLine();
+                    canConvert = int.TryParse(Entering, out Output);
                 }
             }
             return Output;
@@ -313,6 +283,7 @@ namespace Module_5
                         break;
                     }
 
+                    //performing multiplication
                     else if (sign == "**")
                     {
                         matrixOut2 = Multiplication(matrix, matrix3);
@@ -433,6 +404,7 @@ namespace Module_5
                 }
                 else if (sign == "**")
                 {
+                    #region Output 2
                     for (int i = 0; i < matrix.GetLength(0); i++)
                     {
                         Console.Write("| ");
@@ -475,14 +447,15 @@ namespace Module_5
                         Console.WriteLine(" |");
                     }
                     Console.Write("");
+                    #endregion
                 }
                 #endregion
 
+                Console.WriteLine("");
+                Console.ReadKey();
             }
 
             #endregion
-
-            Console.ReadKey();
         }
     }
 }
