@@ -1,0 +1,8 @@
+C:\Users\Admin\Documents\GitHub\Csharp\Module_5\Module_5_ex_5\bin\Debug\Module_5_ex_5.exe.config
+C:\Users\Admin\Documents\GitHub\Csharp\Module_5\Module_5_ex_5\bin\Debug\Module_5_ex_5.exe
+C:\Users\Admin\Documents\GitHub\Csharp\Module_5\Module_5_ex_5\bin\Debug\Module_5_ex_5.pdb
+C:\Users\Admin\Documents\GitHub\Csharp\Module_5\Module_5_ex_5\obj\Debug\Module_5_ex_5.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\Csharp\Module_5\Module_5_ex_5\obj\Debug\Module_5_ex_5.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\Documents\GitHub\Csharp\Module_5\Module_5_ex_5\obj\Debug\Module_5_ex_5.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\Csharp\Module_5\Module_5_ex_5\obj\Debug\Module_5_ex_5.exe
+C:\Users\Admin\Documents\GitHub\Csharp\Module_5\Module_5_ex_5\obj\Debug\Module_5_ex_5.pdb

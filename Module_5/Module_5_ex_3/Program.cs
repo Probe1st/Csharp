@@ -8,10 +8,6 @@ namespace Module_5_ex_3
 {
     internal class Program
     {
-        static string Word(string word)
-        {
-            
-        }
 
         static void Main(string[] args)
         {
@@ -24,8 +20,8 @@ namespace Module_5_ex_3
             // Пример: ПППОООГГГООООДДДААА >>> ПОГОДА
             // Пример: Ххххоооорррооошшшиий деееннннь >>> хороший день
             // 
+            
 
-            string word = "ПППОООГГГООООДДДААА";
         }
     }
 }
