@@ -29,28 +29,6 @@ namespace Module_5_ex_3
             Str = FirstChar + Str;
             return Str;
         }
-
-        static string Reverse(string str)
-        {
-            char[] chars = new char[str.Length];
-
-            for (int i = 0; i < chars.Length; i++)
-            {
-                chars[i] = str[i];
-            }
-
-            string String = "";
-
-            for (int i = (chars.Length - 1); i > -1; i--)
-            {
-                String += chars[i];
-            }
-
-            
-
-            return String;
-        }
-
         static void Main(string[] args)
         {
             // Домашнее задание
