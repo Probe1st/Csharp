@@ -8,6 +8,48 @@ namespace Module_5_ex_3
 {
     internal class Program
     {
+        static string Short(string s)
+        {
+            string Str = String.Empty;
+            s = s.ToLower();
+            string FirstChar = Convert.ToString(s[0]);
+            for (int i = 1; i < s.Length; i++)
+            {
+
+
+                if (s[i] == s[i - 1])
+                {
+                    s.Remove(i, 1);
+                }
+                else
+                {
+                    Str += s[i];
+                }
+            }
+            Str = FirstChar + Str;
+            return Str;
+        }
+
+        static string Reverse(string str)
+        {
+            char[] chars = new char[str.Length];
+
+            for (int i = 0; i < chars.Length; i++)
+            {
+                chars[i] = str[i];
+            }
+
+            string String = "";
+
+            for (int i = (chars.Length - 1); i > -1; i--)
+            {
+                String += chars[i];
+            }
+
+            
+
+            return String;
+        }
 
         static void Main(string[] args)
         {
@@ -20,7 +62,11 @@ namespace Module_5_ex_3
             // Пример: ПППОООГГГООООДДДААА >>> ПОГОДА
             // Пример: Ххххоооорррооошшшиий деееннннь >>> хороший день
             // 
-            
+            string testStr = "ххХхХхХооОоОорРРрооошШшШШий деееннннь";
+
+            Console.WriteLine(Short(testStr));
+
+            Console.ReadKey();
 
         }
     }

@@ -95,12 +95,12 @@ namespace Module_5_ex_2
 
             string input = " ssds 4r 4334 sas   gjj   t w t  f s q";
 
-            Console.WriteLine($"<{MinWord(input)}>");
+            Console.WriteLine($"{MinWord(input)}");
 
             string[] Output = MinWords(input);
             for (int i = 0; i < Output.Length; i++)
             {
-                Console.Write($"<{Output[i]}> ");
+                Console.Write($"{Output[i]} ");
             }
 
             Console.ReadKey();
