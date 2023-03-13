@@ -6,3 +6,11 @@ C:\Users\Admin\Documents\GitHub\Csharp\Module_5\Module_5_ex_5\obj\Debug\Module_5
 C:\Users\Admin\Documents\GitHub\Csharp\Module_5\Module_5_ex_5\obj\Debug\Module_5_ex_5.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\Csharp\Module_5\Module_5_ex_5\obj\Debug\Module_5_ex_5.exe
 C:\Users\Admin\Documents\GitHub\Csharp\Module_5\Module_5_ex_5\obj\Debug\Module_5_ex_5.pdb
+E:\Рабочий стол\repositories\Csharp\Module_5\Module_5_ex_5\bin\Debug\Module_5_ex_5.exe.config
+E:\Рабочий стол\repositories\Csharp\Module_5\Module_5_ex_5\bin\Debug\Module_5_ex_5.exe
+E:\Рабочий стол\repositories\Csharp\Module_5\Module_5_ex_5\bin\Debug\Module_5_ex_5.pdb
+E:\Рабочий стол\repositories\Csharp\Module_5\Module_5_ex_5\obj\Debug\Module_5_ex_5.csproj.AssemblyReference.cache
+E:\Рабочий стол\repositories\Csharp\Module_5\Module_5_ex_5\obj\Debug\Module_5_ex_5.csproj.SuggestedBindingRedirects.cache
+E:\Рабочий стол\repositories\Csharp\Module_5\Module_5_ex_5\obj\Debug\Module_5_ex_5.csproj.CoreCompileInputs.cache
+E:\Рабочий стол\repositories\Csharp\Module_5\Module_5_ex_5\obj\Debug\Module_5_ex_5.exe
+E:\Рабочий стол\repositories\Csharp\Module_5\Module_5_ex_5\obj\Debug\Module_5_ex_5.pdb

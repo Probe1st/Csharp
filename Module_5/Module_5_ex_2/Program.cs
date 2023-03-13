@@ -93,7 +93,7 @@ namespace Module_5_ex_2
             // 2. ГГГГ, ДДДД
             //
 
-            string input = " ssds 4r 4334 sas   gjj   t w t  f s q";
+            string input = Console.ReadLine();
 
             Console.WriteLine($"{MinWord(input)}");
 

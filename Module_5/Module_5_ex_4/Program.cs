@@ -11,7 +11,7 @@ namespace Module_5_ex_4
 
         static void Progression(int[] ints)
         {
-            if ( (ints[1] - ints[0]) == (ints[2] - ints[1]) )
+            if ( ints[2] == ints[0] + (3 - 1) * (ints[2] - ints[1]) ) 
             {
                 Console.WriteLine("arithmetic progression");
             }
@@ -34,27 +34,34 @@ namespace Module_5_ex_4
             //             http://ru.wikipedia.org/wiki/Геометрическая_прогрессия
             //
 
+            #region Filling arrays
             Random random = new Random();
 
             int[] intsArith = new int[random.Next(3, 10)];
+            intsArith[0] = random.Next(1, 100);
+            int stepProgA = random.Next(2, 10);
 
-            for (int i = 0; i < intsArith.Length; i++)
+            for (int i = 1; i < intsArith.Length; i++)
             {
-                intsArith[i] = i + 5;
+                intsArith[i] = intsArith[i - 1] + stepProgA;
             }
+
 
             int[] intsGeom = new int[random.Next(3, 10)];
+            intsGeom[0] = random.Next(1, 100);
+            int stepProgG = random.Next(2, 10);
 
-            for (int i = 0; i < intsGeom.Length; i++)
+            for (int i = 1; i < intsGeom.Length; i++)
             {
-                intsGeom[i] = i * 5;
+                intsGeom[i] = intsGeom[i - 1] * stepProgG;
             }
-
-            Console.WriteLine(intsArith);
-            Console.WriteLine(intsGeom);
+            #endregion
 
             Progression(intsArith);
+            Console.WriteLine();
+
             Progression(intsGeom);
+            Console.WriteLine();
 
             Console.ReadKey();
         }
