@@ -41,20 +41,26 @@ namespace Module_5_ex_4
             intsArith[0] = random.Next(1, 100);
             int stepProgA = random.Next(2, 10);
 
+            Console.WriteLine("arith");
             for (int i = 1; i < intsArith.Length; i++)
             {
                 intsArith[i] = intsArith[i - 1] + stepProgA;
+                Console.Write($"{intsArith[i]} ");
             }
+            Console.WriteLine("");
 
 
             int[] intsGeom = new int[random.Next(3, 10)];
             intsGeom[0] = random.Next(1, 100);
             int stepProgG = random.Next(2, 10);
 
+            Console.WriteLine("geom");
             for (int i = 1; i < intsGeom.Length; i++)
             {
                 intsGeom[i] = intsGeom[i - 1] * stepProgG;
+                Console.Write($"{intsGeom[i]} ");
             }
+            Console.WriteLine("");
             #endregion
 
             Progression(intsArith);

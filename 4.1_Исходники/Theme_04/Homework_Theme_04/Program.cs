@@ -142,7 +142,6 @@ namespace Homework_Theme_04
             int[,] profit = new int[2, Months];
             #endregion
 
-<<<<<<< HEAD
             #region Filling of arrays
             Random random = new Random();
 
@@ -179,11 +178,14 @@ namespace Homework_Theme_04
             }
             #endregion
 
-            #region output
 
-=======
+            #region output
+            #endregion
+
+            #endregion
+
             #region ex. 1 decision
-/*
+
             #region arrays
             //Console.WriteLine("Enter number of months");
             int Months = 12;
@@ -230,7 +232,7 @@ namespace Homework_Theme_04
 
             #region output
 
->>>>>>> 2b780889d42be5b0d93e27ec86fad91cfad97e8b
+
             #region table
             Console.WriteLine($"{"Month",5}    {"Receipts, thous. RUB",20}    {"Expenses, thous. RUB",20}    {"Profit, thous. RUB",18}");
 
@@ -246,18 +248,14 @@ namespace Homework_Theme_04
 
             #region Worst months
             Console.Write("Worst profit in moths: ");
-<<<<<<< HEAD
-            #endregion
-
-=======
-
 
             #endregion
 
->>>>>>> 2b780889d42be5b0d93e27ec86fad91cfad97e8b
-            #endregion
+
 */
+
             #endregion
+
 
             #region ex. 3.1-3.2 decision
             /*
@@ -272,8 +270,8 @@ namespace Homework_Theme_04
                             if (columns < 1)
                             {
                                 Console.WriteLine("You entered inccorect number. " +
-                                    "Number must be natural. ") +
-                                    "\nEntering new the number of columns";
+                                    "Number must be natural. " +
+                                    "\nEntering new the number of columns");
                                 columns = Convert.ToInt32(Console.ReadLine());
                             }
                             else
@@ -293,8 +291,8 @@ namespace Homework_Theme_04
                             if (lines < 1)
                             {
                                 Console.WriteLine("You entered inccorect number. " +
-                                    "Number must be natural. ") +
-                                    "\nEntering new the number of columns";
+                                    "Number must be natural. " +
+                                    "\nEntering new the number of columns");
                                 lines = Convert.ToInt32(Console.ReadLine());
                             }
                             else
@@ -528,58 +526,24 @@ namespace Homework_Theme_04
             /*
                         #region Data entry
 
+                        #region initialization
                         int columns1 = 0;
                         int lines1 = 0;
                         int columns2 = 0;
                         int lines2 = 0;
 
-<<<<<<< HEAD
-            #region initialization
-            int columns1 = 0;
-            int lines1 = 0;
-            int columns2 = 0;
-            int lines2 = 0;
+                        int FirstSummand = 0;
 
-            int FirstSummand = 0;
-
-            int[,] matrix1 = new int[lines1, columns1];
-            int[,] matrix2 = new int[lines2, columns2];
-            int[,] matrixOut = new int[lines1, columns2];
-
-            bool check = false;
-
-            Random rand = new Random();
-            #endregion
-
-            check = false;
-            while (check == false)
-            {
-                Console.WriteLine("Enter the number of columns in the first matrix");
-                columns1 = Convert.ToInt32(Console.ReadLine());
-
-                #region checking numbers of columns
-                check = false;
-                while (check == false)
-                {
-                    if (columns1 < 1)
-                    {
-                        Console.WriteLine("You entered inccorect numbers. " +
-                            "Entering new the number of columns");
-                        columns1 = Convert.ToInt32(Console.ReadLine());
-                    }
-                    else
-                    {
-                        check = true;
-                    }
-                }
-                #endregion
-=======
                         int[,] matrix1 = new int[lines1, columns1];
                         int[,] matrix2 = new int[lines2, columns2];
-
-                        Random rand = new Random();
+                        int[,] matrixOut = new int[lines1, columns2];
 
                         bool check = false;
+
+                        Random rand = new Random();
+                        #endregion
+
+                        check = false;
                         while (check == false)
                         {
                             Console.WriteLine("Enter the number of columns in the first matrix");
@@ -602,85 +566,125 @@ namespace Homework_Theme_04
                             }
                             #endregion
 
-                            Console.WriteLine("Enter the number of lines in the first matrix");
-                            lines1 = Convert.ToInt32(Console.ReadLine());
->>>>>>> 2b780889d42be5b0d93e27ec86fad91cfad97e8b
+                            int[,] matrix1 = new int[lines1, columns1];
+                            int[,] matrix2 = new int[lines2, columns2];
 
-                            #region checking numbers of lines
-                            check = false;
+                            Random rand = new Random();
+
+                            bool check = false;
                             while (check == false)
                             {
-                                if (lines1 < 1)
+                                Console.WriteLine("Enter the number of columns in the first matrix");
+                                columns1 = Convert.ToInt32(Console.ReadLine());
+
+                                #region checking numbers of columns
+                                check = false;
+                                while (check == false)
                                 {
-                                    Console.WriteLine("You entered inccorect numbers. " +
-                                        "Entering new the number of columns");
-                                    lines1 = Convert.ToInt32(Console.ReadLine());
+                                    if (columns1 < 1)
+                                    {
+                                        Console.WriteLine("You entered inccorect numbers. " +
+                                            "Entering new the number of columns");
+                                        columns1 = Convert.ToInt32(Console.ReadLine());
+                                    }
+                                    else
+                                    {
+                                        check = true;
+                                    }
                                 }
-                                else
+                                #endregion
+
+                                Console.WriteLine("Enter the number of lines in the first matrix");
+                                lines1 = Convert.ToInt32(Console.ReadLine());
+
+
+                                #region checking numbers of lines
+                                check = false;
+                                while (check == false)
+                                {
+                                    if (lines1 < 1)
+                                    {
+                                        Console.WriteLine("You entered inccorect numbers. " +
+                                            "Entering new the number of columns");
+                                        lines1 = Convert.ToInt32(Console.ReadLine());
+                                    }
+                                    else
+                                    {
+                                        check = true;
+                                    }
+                                }
+                                #endregion
+
+                                Console.WriteLine("Enter the number of columns in the first matrix");
+                                columns2 = Convert.ToInt32(Console.ReadLine());
+
+                                #region checking numbers of columns
+                                check = false;
+                                while (check == false)
+                                {
+                                    if (columns2 < 1)
+                                    {
+                                        Console.WriteLine("You entered inccorect numbers. " +
+                                            "Entering new the number of columns");
+                                        columns2 = Convert.ToInt32(Console.ReadLine());
+                                    }
+                                    else
+                                    {
+                                        check = true;
+                                    }
+                                }
+                                #endregion
+
+
+                                #region checking numbers of columns
+                                check = false;
+                                while (check == false)
+                                {
+                                    if (columns2 < 1)
+                                    {
+                                        Console.WriteLine("You entered inccorect numbers. " +
+                                            "Entering new the number of columns");
+                                        columns2 = Convert.ToInt32(Console.ReadLine());
+                                    }
+                                    else
+                                    {
+                                        check = true;
+                                    }
+                                }
+                                #endregion
+
+                                Console.WriteLine("Enter the number of lines in the first matrix");
+                                lines2 = Convert.ToInt32(Console.ReadLine());
+
+
+                                #region checking numbers of lines
+                                check = false;
+                                while (check == false)
+                                {
+                                    if (lines2 < 1)
+                                    {
+                                        Console.WriteLine("You entered inccorect numbers. " +
+                                            "Entering new the number of columns");
+                                        lines2 = Convert.ToInt32(Console.ReadLine());
+                                    }
+                                    else
+                                    {
+                                        check = true;
+                                    }
+                                }
+                                #endregion
+
+                                if (columns1 == lines2)
                                 {
                                     check = true;
                                 }
-                            }
-                            #endregion
-
-                            Console.WriteLine("Enter the number of columns in the first matrix");
-                            columns2 = Convert.ToInt32(Console.ReadLine());
-
-                            #region checking numbers of columns
-                            check = false;
-                            while (check == false)
-                            {
-                                if (columns2 < 1)
-                                {
-                                    Console.WriteLine("You entered inccorect numbers. " +
-                                        "Entering new the number of columns");
-                                    columns2 = Convert.ToInt32(Console.ReadLine());
-                                }
                                 else
                                 {
-                                    check = true;
+                                    Console.WriteLine("You have entered the wrong number of columns" +
+                                        "and rows of matrices. Enter new matrix sizes");
                                 }
                             }
-                            #endregion
 
-<<<<<<< HEAD
-                #region checking numbers of columns
-                check = false;
-                while (check == false)
-                {
-                    if (columns2 < 1)
-                    {
-                        Console.WriteLine("You entered inccorect numbers. " +
-                            "Entering new the number of columns");
-                        columns2 = Convert.ToInt32(Console.ReadLine());
-                    }
-                    else
-                    {
-                        check = true;
-                    }
-                }
-                #endregion
-=======
-                            Console.WriteLine("Enter the number of lines in the first matrix");
-                            lines2 = Convert.ToInt32(Console.ReadLine());
->>>>>>> 2b780889d42be5b0d93e27ec86fad91cfad97e8b
-
-                            #region checking numbers of lines
-                            check = false;
-                            while (check == false)
-                            {
-                                if (lines2 < 1)
-                                {
-                                    Console.WriteLine("You entered inccorect numbers. " +
-                                        "Entering new the number of columns");
-                                    lines2 = Convert.ToInt32(Console.ReadLine());
-                                }
-                                else
-                                {
-                                    check = true;
-                                }
-                            }
-                            #endregion
 
                             if (columns1 == lines2)
                             {
@@ -693,27 +697,15 @@ namespace Homework_Theme_04
                             }
                         }
 
-<<<<<<< HEAD
-                if (columns1 == lines2)
-                {
-                    check = true;
-                }
-                else
-                {
-                    Console.WriteLine("You have entered the wrong number of columns" +
-                        "and rows of matrices. Enter new matrix sizes");
-                }
-            }
+                        #region filling arrays
+                        for (int i = 0; i < matrix1.GetLength(0); i++)
+                        {
+                            for (int j = 0; j < matrix1.GetLength(1); j++)
+                            {
+                                matrix1[i, j] = rand.Next(1, 11);
+                            }
+                        }
 
-            #region filling arrays
-            for (int i = 0; i < matrix1.GetLength(0); i++)
-            {
-                for (int j = 0; j < matrix1.GetLength(1); j++)
-                {
-                    matrix1[i, j] = rand.Next(1, 11);
-                }
-            }
-=======
                         int[,] matrixOut = new int[lines1, columns2];
 
                         for (int i = 0; i < matrix1.GetLength(0); i++)
@@ -731,51 +723,50 @@ namespace Homework_Theme_04
                                 matrix2[i, j] = rand.Next(1, 11);
                             }
                         }
->>>>>>> 2b780889d42be5b0d93e27ec86fad91cfad97e8b
+
 
                         for (int i = 0; i < matrixOut.GetLength(0); i++) ;
                         {
                             for (int j = 0; j < matrixOut.GetLength(1); j++) ;
                             {
-                                matrixOut[i, j] = 
+                                matrixOut[i, j] =
 
-<<<<<<< HEAD
-            #endregion
-
-            #endregion
-
-            #region program
-            for (int i = 0; i < matrixOut.GetLength(0); i++)                                //строки
-            {
-                for (int j = 0; j < matrixOut.GetLength(1); j++)                            //столбцы
-                {
-                    for (int x = 0; x < matrix1.GetLength(0); x++)                          //строки
-                    {
-                        for (int y = 0; y < matrix2.GetLength(1); y++)                      //столбцы
-                        {
-                             = matrix1[i, y] * matrix2[x, j];
-                        }
-                    }
-                }
-            }
-
-
-
-            for (int i = 0; i < matrixOut.GetLength(0); i++)
-            {
-                for (int j = 0; j < matrixOut.GetLength(1); j++)
-                {
-                    matrixOut[i, j] = (matrix1[i, j] * matrix2[i, j]); 
-                }
-            }
-            #endregion            
-
-=======
-                        }
 
                         #endregion
+
+                                #endregion
+
+                                #region program
+                        for (int i = 0; i < matrixOut.GetLength(0); i++)                                //строки
+                                {
+                                    for (int j = 0; j < matrixOut.GetLength(1); j++)                            //столбцы
+                                    {
+                                        for (int x = 0; x < matrix1.GetLength(0); x++)                          //строки
+                                        {
+                                            for (int y = 0; y < matrix2.GetLength(1); y++)                      //столбцы
+                                            {
+                                                = matrix1[i, y] * matrix2[x, j];
+                                            }
+                                        }
+                                    }
+                                }
+
+
+
+                                for (int i = 0; i < matrixOut.GetLength(0); i++)
+                                {
+                                    for (int j = 0; j < matrixOut.GetLength(1); j++)
+                                    {
+                                        matrixOut[i, j] = (matrix1[i, j] * matrix2[i, j]);
+                                    }
+                                }
+                                #endregion
+
+
+                            }
+
+                            #endregion
             */
->>>>>>> 2b780889d42be5b0d93e27ec86fad91cfad97e8b
             #endregion
 
             Console.ReadKey();
