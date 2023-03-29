@@ -133,54 +133,6 @@ namespace Homework_Theme_04
 
             // ---------------------------------------------------------------------- \\
             #region ex. 1 dicision
-/*
-            #region arrays
-            //Console.WriteLine("Enter number of months");
-            int Months = 12;
-            int[] expenses = new int[Months];
-            int[] receipts = new int[Months];
-            int[,] profit = new int[2, Months];
-            #endregion
-
-            #region Filling of arrays
-            Random random = new Random();
-
-            for (int i = 0; i < expenses.Length; i++)       //filling the expenses
-            {
-                expenses[i] = random.Next(50_000, 100_000);
-            }
-
-            for (int i = 0; i < receipts.Length; i++)       //filling the reciepts
-            {
-                receipts[i] = random.Next(50_000, 200_001);
-            }
-
-            for (int i = 0; i < Months; i++)         //filling the profit
-            {
-                profit[1, i] = receipts[i] - expenses[i];
-            }
-            for (int i = 0; i < Months; i++)
-            {
-                profit[0, i] = i + 1;
-            }
-
-            #endregion
-
-            #region The number of months with a positive profit
-            int NumMonths = 0;
-
-            for (int i = 0; i < Months; i++)
-            {
-                if (profit[1, i] > 0)
-                {
-                    NumMonths++;
-                }
-            }
-            #endregion
-
-
-            #region output
-            #endregion
 
             #endregion
 
@@ -251,8 +203,6 @@ namespace Homework_Theme_04
 
             #endregion
 
-
-*/
 
             #endregion
 
